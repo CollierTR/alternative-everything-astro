@@ -1,17 +1,93 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Alternative Everything">
+    <!-- Header -->
+    <header>
+        <div>
+            <h1>Alternative Everything</h1>
+            <p>A return to Intentional Living</p>
+        </div>
+        <div class="custom-shape-divider-bottom-1709772170">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+            </svg>
+        </div>       
+    </header>
+
+    <!-- Page content -->
+    <div>
+        <section>
+            <p>The world is a degenerating and confused mess, and the commonplace “solutions” are not working. We don’t have to settle for living in a mess, with solutions that don’t work. We don’t have to settle for unhealthy food, poor government education, complicated economic structures, and division and social isolation.
+                There are people that want to create something better and different. We can grow our own healthy food, so we feel better, and aren’t dependent on the conventional food supply chain.  We can build a different educational environment for our children at home or private schools. We can build a counter-economy for trade and business transactions. We can create a true community of caring and like minded people.
+                </p>
+
+            <p> We are people that want the same things you do. Come join us.</b>
+            </p>
+        </section>
+
+        <div id="garden-pic">
+            <div class="custom-shape-divider-top-1709869940">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="custom-shape-divider-bottom-1709870005">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+
+        <section id="compare-section">
+            <div class="comparisons-list">
+                <div class="list-block">
+                    <h2>The System</h2>
+                    <h2>vs.</h2>
+                    <h2>The Alternative</h2>
+                </div>
+                <div class="list-block">
+                    <p>Isolation</p>
+                    <img src="/1.png" alt="Community vs isolation">
+                    <p>Community</p>
+                </div>                    
+                <div class="list-block">
+                    <p>Division</p>
+                    <img src="/3.png" alt="Unity vs division">
+                    <p>Unity</p>
+                </div>
+                <div class="list-block">
+                    <p>Destruction</p>
+                    <img src="/fire.png" alt="Creation vs destruction">
+                    <p>Creation</p>
+                </div>
+                <div class="list-block">
+                    <p>Emptiness</p>
+                    <img src="/meaningless.png" alt="Purpose vs emptiness">
+                    <p>Purpose</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="herb-pic">
+            <div class="custom-shape-divider-top-1709869940">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="custom-shape-divider-bottom-1709870005">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+
+        <section>
+            <h2>Join us!</h2>
+            <p>Are you interested learning more about our community? <br> Visit our About page to learn more!</p>
+            <a href="tel:816-575-2798"><button><i class="fa fa-phone fa-lg" style="padding-right: .5em;"></i> 816-575-2798</button></a>
+            <a href="/about"><button>Learn more!</button></a>
+        </section>
+    </div>
+</Layout>

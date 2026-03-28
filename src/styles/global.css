@@ -1,0 +1,584 @@
+:root {
+    --default-text: #160E10;
+    /*--background: #F5E6CC;*/
+    --background: transparent;
+    --primary: #27470C;
+    --secondary: #6C7275;
+    --accent: #C30909;
+    --white: #ffffff;
+    --tan: hsl(34, 65%, 85%);
+}
+
+* {
+}
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--default-text);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+html {
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMWFhUXGCAbGRgYGB0fGhsdICAaICIeGx4fHiggIiAlHh0fITEhJSkrLi4uGR8zODMuNygtLisBCgoKDg0OGhAQGy0lHSUtLS0tLS0tMC0tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAACAwQBAAX/xAA9EAACAQMDAwIFAgUDAgQHAAABEQIDEiEAMUETIlEEYSMyQnGBM5EUQ1JioQVysYLBU5Ki0SQ0k7LS8PH/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIFBP/EABoRAQEBAQADAAAAAAAAAAAAAAARASExQfD/2gADAwEAAhEDEQA/AKetVjO6UqpurC0dMBRI2PkIHKbWj61Rhmo+tbiIGMe/yrL9tZMCMkI0rpVIs3HwdvfdeRobBCREYUu+uyeoeRukhLhc41znuHA1RKEDKoSYTBNgGckMgnY4GoPTmqAYXV7pU5smGxEimLj3bgPcLbVfpwOyERSQE2RMksbr9wT4es9MKYFkRGNsCSTUKVx/wxvxpSGSlUIqAGq+jBIc5DAfzIbE6UfU1LJh+oYNL5YDkZS3GxlkpnVtaYIPbACwHMkwRHdccMaiq+op9OQkIIdOK6pZaIBKbOwe+mGnVaku5moFXAQGMkbcWPf86T6KtOZgXUAHVCkBaVsSQg1t9j76prGEpKdua4AHULuDH782+NJo+qBMZKJfUtAqlIAZX+D4eglqVp2MTmXSKdME3Xq5E2vbHu9UAzE5GXUI6tO0YCBCxhkbvbQVJqDUCekU6kiA5BZ8bZfGiqSDliNxnDeRxuscELH30C/UQnOBF8ounMEipEHeWXjIlsWg86KNSSnia+EQTViAXuA8BYJ3fvrKcogKJp2fFfZ4MhnDwcl7/nS/UGNkpk05E06aAghlEBxRRIx40D6tPJYl/wDMRIJqfjDGAwDaBzo/T0RdBRMc1S7hyM43Lz9n+NDL1AjMgmA+PCKt5OM/3Fu720Xp/UxlUpi+ORVKs3APk7Ihe+dAqNIGABEoE0P/ABBcntcXLdd2hqUM1CiSekx1AM/jZffL11L1HbEdQM+nb62l83/AKvlGtNR9YCoB3U9ojDG2zIQG+z1UPFECoLYsGvMn4gwSCdueO3j8ak6IIiOlK3ozfxY4ZkDFDDb7sgaqYNSHdF9WoT2BlAY2bAO/sRqYWGET1YW9Kb+EF85BJCYRWCcs6YplahCVOUelUs6MA7gXHtKHuBzzp0/SxkSTCbFYEMjcBXDhZ29tSVZicJudMxMKYHwwR9JGEiD4O2qjON+ZwzXQFryAgMBPlnzqBZ9MD05yp1HHqkdwx2nfy4teHqT1P8Ap4EJEUaknThEUxZkOGMxJYIz9j+HxqCyJFWBPTmpdIecnZDZEDfSq04gVVUpAqlEylT2xh4y0wtnq4KvWenUpEUSbjTCBQK+pInC2/8A7pVD0ovQp1CerOR2TAGUI5BBAA0ydcdwE4BVxE9h3PGzfD1N6euCIKpG09UsUyDJA7Ad2AGc5t0AD0YjC0U/USAoyBJkHmQJAX17qXAHOq6kLuo6UzEQgASR3YB4GF7vOp+sLGZ07BRZFks926yVghb51V66vCMizT+elBI/MRgFeWFnYagXH0fzuixKvH+ZnDFxfuu0caKgC6c504jNSQHUZDBION2BnIT5etp1Mx/SJ68to+EDwhIHnSfSepCgXEytqyHwls9sMIhIDOgdGnbBfDiRSntM2onw/lyMl6GvQcZQEqVwogEmBlEMjJeERxoj6iQh84fQBuFPky+Yfdk2rVHqKptqAVTCQEA7Gnz74/bQRVPTx+KOpTBnUpgnp8gJHJcsYOEwPfV);
+}
+
+body {
+    position: relative;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    margin: 2em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.section-titles {
+    margin: 0 auto;
+    font-size: 1.7em;
+}
+
+/*------------------------------------------------------   CSS for Nav-bar */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: var(--primary);
+    border-bottom: 3px var(--default-text) solid;
+    text-shadow: 2px 2px 1px var(--default-text);
+    color: var(--white);
+    height: 100px; 
+    background-image: url(/darth-stripe.png);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--default-text) 0em 2px 1em;
+
+}
+
+nav ul li {
+    display: inline;
+    margin: 30px;
+    font-size: x-large;
+}
+
+nav h1 {
+    font-size: xx-large;
+}
+
+button {
+    border: 3px solid var(--default-text);
+    border-radius: 20px;
+    padding: 13px 26px;
+    font-size: 1.2em;
+    color: var(--default-text);
+    background-color: var(--white);
+    font-weight: bold;
+    margin: 1em;
+}
+
+button:hover {
+    background-color: #bad4c2;
+}
+
+
+/*------------------------------------------------------   CSS for Header */
+
+header {
+    font-size: 2em;
+    display: grid;
+    place-items: center;
+    background-image: url(/new-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    text-shadow: 4px 4px 5px var(--default-text), 
+    -4px -4px 5px var(--default-text),
+    0px 4px 5px var(--default-text),
+    0px -4px 5px var(--default-text);
+    border-radius: 0 0 10% 10%;
+    border-bottom: 1px solid var(--default-text);
+    box-shadow: var(--default-text) 0em 2px 1em;
+}
+
+
+#about-header {
+    background-image: url(/path.png);
+}
+
+#values-header {
+    background-image: url(/Mountain.png);
+}
+
+header div {
+    background-color: rgba(210, 180, 140, 0);
+    width: 50vw;
+    text-align: center;
+    color: var(--white);
+    
+}
+
+header p {
+    margin: 0;
+    width: 50vw;
+    font-size: 1.3em;
+}
+
+
+.custom-shape-divider-bottom-1709772170 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1709772170 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 44px;
+}
+
+.custom-shape-divider-bottom-1709772170 .shape-fill {
+    fill: none;
+}
+
+/*------------------------------------------------------   CSS for All Sections */
+
+section{
+    background-color: var(--background);
+    margin: 2em 3em 5em;
+    padding: 1em;
+}
+
+.section-titles {
+    background-color: gray;
+    width: 25vw;
+}
+
+/*------------------------------------------------------   CSS for Split Sections */
+
+.split-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    margin: 3em;
+    margin-bottom: 6em;
+}
+
+.container {
+    background-color: transparent;
+}
+
+/*------------------------------------------------------   CSS for Comparision lists */
+
+.comparisons li {
+    list-style-type: none;
+    font-size: 2.7em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 1.5em;
+}
+
+h5 {
+    font-size: 2em;
+    margin-top: 4em;
+}
+
+h5:first-of-type {
+    margin-top: 0;
+}
+
+.line-up {
+    display: flex;
+}
+
+.right {
+    justify-content: right;
+    align-items: center;
+}
+
+.left {
+    justify-content: left;
+    align-items: center;
+}
+
+.line-up-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 0 0.8em;
+}
+
+#contact {
+    background-color: #761717;
+    width: auto;
+    margin: 3px 0;
+    border-top: 3px solid var(--default-text);
+}
+
+.comparisons-list {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.comparisons-list h2 {
+    font-size: 1.7em;
+    display: block;
+    width: 35%;
+    margin-bottom: 0;
+}
+
+.comparisons-list img {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    width: 500px;
+    margin: 1em auto;
+}
+
+.list-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.list-block p {
+    margin: 0;
+    display: block;
+    width: 25%;
+}
+
+/*------------------------------------------------------   CSS for Comparision imgs */
+#garden-pic {
+    font-size: 2em;
+    display: grid;
+    place-items: center;
+    background-image: url(/new-store.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    text-shadow: 2px 2px 1px var(--default-text);
+    border-bottom: 1px var(--default-text) solid;
+    border-top: 1px var(--default-text) solid;
+    box-shadow: var(--default-text) 0em 2px 1em;
+}
+
+#herb-pic {
+    font-size: 2em;
+    display: grid;
+    place-items: center;
+    background-image: url(/drugs-to-herbs.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    text-shadow: 2px 2px 1px var(--default-text);
+    border-bottom: 1px var(--default-text) solid;
+    border-top: 1px var(--default-text) solid;
+    box-shadow: var(--default-text) 0em 2px 1em;
+    
+}
+
+.custom-shape-divider-top-1709869940 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1709869940 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 42px;
+}
+
+.custom-shape-divider-top-1709869940 .shape-fill {
+    fill: var(--primary);
+}
+
+.custom-shape-divider-bottom-1709870005 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1709870005 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 42px;
+}
+
+.custom-shape-divider-bottom-1709870005 .shape-fill {
+    fill: var(--primary);
+}
+
+/*------------------------------------------------------   Footer */
+
+footer {
+    background-color: var(--primary);
+    height: 200px;
+    border-top: 5px solid var(--default-text);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    border-top: 5px var(--default-text) solid;
+    box-shadow: var(--default-text) 0em 2px 1em;
+    background-image: url(/darth-stripe.png);
+
+
+}
+
+footer .footer-segment h4 {
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+}
+
+.footer-segment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 30vw;
+
+}
+
+.tristan {
+    bottom: 0;
+    font-size: 0.9em;
+}
+
+footer > p {
+    font-size: 20px;
+}
+
+.footer-segment a {
+    color: var(--white);
+}
+
+a {
+    color: var(--white);
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #aeb1b3;
+}
+
+/*------------------------------------------------------   Dropdown menus */
+
+.navbar {
+    overflow: hidden;
+    width: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 1.4em;
+    color: var(--white);
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 1.4em;  
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    text-shadow: 2px 2px 1px var(--default-text);
+
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: var(--secondary);
+    text-shadow: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    text-shadow: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ebe9e9;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .no-change:hover {
+    color: var(--white);
+  }
+
+  .grit {
+    -webkit-mask-image: url("/grit.png");
+    mask-image: url("/grit.png");
+  }
+
+  main {
+    position: relative;
+  }
+
+  /*------------------------------------------------------   Responsiveness desktop */
+
+
+  @media all and (min-width: 1600px) {
+
+    main {
+        margin: 0 auto;
+        background-color: var(--background);
+        border: 2px solid var(--default-text);
+        
+    }
+  }
+
+    /*------------------------------------------------------   Responsiveness Mobile */
+
+    @media only screen and (max-width: 600px) {
+
+        nav {
+            flex-direction: column;
+            height: auto;
+            position: static;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav > a > button:last-of-type {
+            display: none;
+        }
+
+        .list-block  {
+            display: none;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        header {
+            height: auto;
+            padding: 2em;
+            background-image: url(/crowed-of-people.jpg);
+        }
+
+        header div, header p {
+            width: 75vw;
+            font-size: 1.05em;
+        }
+
+        p {
+            font-size: 2.05em;
+        }
+
+        h5 {
+            font-size: 2.5em;
+            margin-bottom: -0.5em;
+        }
+
+        .footer-segment {
+            display: none;
+        }
+
+        footer {
+            height: 8em;
+        }
+
+        #herb-pic {
+            background-image: url(/darth-stripe.png);
+            background-color: var(--primary);
+            height: 1em;
+            border-top: 2px solid var(--default-text);
+            border-bottom: 2px solid var(--default-text);
+            display: none;
+
+        }
+
+        #herb-pic > div {
+            display: none;
+        }
+
+        #garden-pic {
+            background-image: url(/darth-stripe.png);
+            background-color: var(--primary);
+            height: 1em;
+            border-top: 2px solid var(--default-text);
+            border-bottom: 2px solid var(--default-text);
+
+        }
+
+        #garden-pic > div {
+            display: none;
+        }
+
+        #compare-section {
+            display: none;
+        }
+
+
+    }
