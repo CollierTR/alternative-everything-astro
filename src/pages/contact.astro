@@ -1,161 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Button from '../components/Button.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 export const prerender = true;
 ---
 
 <Layout title="Contact Us">
-    <!-- Header -->
     <Header title="Contact Us" id="about-header" />
 
-    <div class="w-11/12 flex justify-center mb-40 mt-32 xl:gap-x-20 mx-auto xl:flex-row text-primary flex-col place-items-center xl:place-items-start gap-20 xl:gap-40">
-      <div class="flex-col flex gap-4 xl:gap-10 xl:w-5/12 w-10/12 blackOutline ">
-        <h1 class="xl:text-6xl text-accent font-serif text-5xl">
+    <div class="w-11/12 flex justify-center mb-40 mt-32 2xl:gap-x-20 mx-auto 2xl:flex-row text-primary flex-col place-items-center 2xl:place-items-start gap-20 2xl:gap-40">
+      <div class="flex-col flex gap-4 2xl:gap-10 2xl:w-5/12 w-10/12 blackOutline ">
+        <h1 class="2xl:text-6xl text-accent font-serif text-5xl">
           Join Our Intentional Community
         </h1>
-        <div class="xl:text-2xl text-2xl text-black space-y-6">
+        <div class="2xl:text-2xl text-2xl text-black space-y-6">
           <p>
             Are you ready to take the next step toward a more intentional, self-reliant, and community-focused life? We are looking for like-minded individuals and families who are passionate about building a future founded on truth, tradition, and mutual support.
           </p>
           <p>
-            Please fill out the application form to the right. This helps us understand your background, your values, and your reasons for wanting to join Alternative Everything. 
+            Please fill out the application form. This helps us understand your background, your values, and your reasons for taking interest in our community. 
           </p>
-          <div class="pt-6 border-t border-gray-200 text-lg">
-            <p class="font-bold">Contact Information:</p>
-            <p>Phone: (816) 575-2798</p>
-            <p>Address: 3100 NW Winchester Rd, Cameron, MO 64429</p>
-          </div>
-        </div>
-        <div class="flex gap-6">
-          <Button text="Call Us" link="tel:816-575-2798" />
-          <Button text="About Us" link="/about" />
         </div>
       </div>
 
-      <div class="xl:w-5/12 w-full bg-white py-16 rounded-2xl sm:w-9/12 shadow-xl border border-gray-100">
-        <form
-          name="Contact" 
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="flex flex-col gap-4 md:gap-6 place-items-center"
-          method="post"
-          action="/dummy-form.html"
-        >
-          <p class="hidden">
-            <label>
-              Don’t fill this out:
-              <input name="bot-field" />
-            </label>
-          </p>
-          <input type="hidden" name="form-name" value="Contact Form" />
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-10/12 md:w-3/4">
-            <span class="flex gap-2 flex-col">
-              <label for="name" class="text-base md:text-xl text-black ">Name:</label>
-              <input type="text" name="name" required id="name" placeholder="Name" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-            </span>
-            <span class="flex gap-2 flex-col">
-              <label for="age" class="text-base md:text-xl text-black">Age:</label>
-              <input type="text" name="age" required id="age" placeholder="Age" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-            </span>
-            <span class="flex gap-2 flex-col">
-              <label for="sex" class="text-base md:text-xl text-black">Sex:</label>
-              <input type="text" name="sex" required id="sex" placeholder="Sex" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-            </span>
-            <span class="flex gap-2 flex-col">
-              <label for="race" class="text-base md:text-xl text-black">Race:</label>
-              <input type="text" name="race" required id="race" placeholder="Race" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-            </span>
-          </div>
-
-          <span class="flex gap-2 flex-col w-10/12 md:w-3/4">
-            <label for="household_count" class="text-base md:text-xl text-black">How many in your household?</label>
-            <input type="text" name="household_count" required id="household_count" placeholder="0" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-          </span>
-
-          <div class="flex flex-col gap-4 w-10/12 md:w-3/4 text-black">
-            <div class="flex flex-col gap-2">
-                <p class="font-bold text-sm md:text-base">Are you a Christian?</p>
-                <div class="flex space-x-4">
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="christian" value="yes"> <span>Yes</span></label>
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="christian" value="no"> <span>No</span></label>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <p class="font-bold text-sm md:text-base">Do you believe Joseph Smith was a prophet?</p>
-                <div class="flex space-x-4">
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="joseph_smith" value="yes"> <span>Yes</span></label>
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="joseph_smith" value="no"> <span>No</span></label>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <p class="font-bold text-sm md:text-base">Are you Red-Pilled?</p>
-                <div class="flex space-x-4">
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="red_pilled" value="yes"> <span>Yes</span></label>
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="red_pilled" value="no"> <span>No</span></label>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <p class="font-bold text-sm md:text-base">Who is head of the family?</p>
-                <div class="flex flex-wrap gap-4">
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="family_head" value="husband"> <span>Husband</span></label>
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="family_head" value="wife"> <span>Wife</span></label>
-                    <label class="flex items-center space-x-2 text-sm"><input type="radio" name="family_head" value="mutual"> <span>Mutual</span></label>
-                </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-4 w-10/12 md:w-3/4 text-black border-t border-gray-300 pt-4">
-            <p class="font-bold text-sm md:text-base">Primary reasons for wanting to join?</p>
-            <p class="text-xs italic text-secondary">Number options (1 = most important, 12 = least).</p>
-            <div class="grid grid-cols-1 gap-2">
-                {[
-                    "Creating a healthy, moral culture.",
-                    "Fostering interpersonal relationships.",
-                    "Making a healthy environment for children.",
-                    "Growing or raising your own food.",
-                    "Mutual self-defense.",
-                    "Relocating to a better area.",
-                    "Working with like minded people.",
-                    "Spiritual growth.",
-                    "Outreach, ministry or charity work.",
-                    "Affordable housing.",
-                    "Escaping a coming disaster."
-                ].map((reason) => (
-                    <div class="flex items-center space-x-3">
-                        <input type="number" min="1" max="12" class="w-12 border border-gray-300 rounded p-0.5 text-center text-sm" placeholder="__">
-                        <span class="text-sm">{reason}</span>
-                    </div>
-                ))}
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            class=" border-2 border-primary hover:bg-[#bad4c2] text-default-text bg-white rounded-lg w-10/12 md:w-3/4 md:text-2xl py-2 md:py-3 font-bold"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <ContactForm />
     </div>
 </Layout>
-
-<style>
-  ::placeholder { 
-    color: darkgrey; 
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  input {
-    color: black; 
-  }
-</style>

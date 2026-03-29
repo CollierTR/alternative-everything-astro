@@ -14,7 +14,7 @@
 ### Architecture
 - `src/pages/`: Contains the route-based pages (`index.astro`, `about.astro`, `contact.astro`, `our-values.astro`).
 - `src/layouts/Layout.astro`: The primary layout component wrapping all pages, including navigation and footer.
-- `src/components/`: Reusable UI components like `Nav.astro`, `Footer.astro`, and `Header.astro`.
+- `src/components/`: Reusable UI components like `Nav.astro`, `Footer.astro`, `Header.astro`, `Button.astro`, and `ContactForm.astro`.
 - `src/styles/global.css`: Global stylesheet containing Tailwind imports, CSS variables for the color palette, and custom styles (including legacy styles and responsive overrides).
 - `public/`: Static assets such as images (`.png`, `.jpg`, `.svg`) and favicons.
 - `oldsite/`: Legacy version of the site (HTML/CSS), used for reference during migration.
