@@ -9,6 +9,11 @@
   --accent: #c30909;
   --white: #ffffff;
   --tan: hsl(34, 65%, 85%);
+  --primary-light: #bad4c2;
+}
+
+.blackOutline {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 * {
