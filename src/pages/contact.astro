@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us">
+    <!-- Header -->
+    <header class="text-[2em] grid place-items-center bg-[url('/path.png')] bg-no-repeat bg-cover h-[400px] relative [text-shadow:4px_4px_5px_theme(colors.default-text),-4px_-4px_5px_theme(colors.default-text),0_4px_5px_theme(colors.default-text),0_-4px_5px_theme(colors.default-text)] rounded-b-[10%] border-b border-default-text shadow-[0_2px_1em] shadow-default-text max-[600px]:h-auto max-[600px]:p-8 max-[600px]:bg-[url('/crowed-of-people.jpg')]">
+        <div class="bg-transparent w-[50vw] text-center text-white max-[600px]:w-[75vw] max-[600px]:text-[1.05em]">
+            <h1 class="text-4xl font-bold">Contact Us</h1>
+        </div>
+        <div class="custom-shape-divider-bottom-1709772170 absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[44px]">
+                <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill fill-none"></path>
+            </svg>
+        </div>       
+    </header>
+
+    <div class="py-12 px-4 bg-transparent">
+        <div class="max-w-4xl mx-auto bg-white p-10 rounded-xl shadow-2xl border border-gray-200 text-left">
+            <form action="#" method="POST" class="space-y-8 text-default-text">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="block font-bold">Name</label>
+                        <input type="text" name="name" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none py-2" placeholder="______________________________">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block font-bold">Age</label>
+                        <input type="text" name="age" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none py-2" placeholder="_____">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block font-bold">Sex</label>
+                        <input type="text" name="sex" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none py-2" placeholder="__________">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block font-bold">Race</label>
+                        <input type="text" name="race" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none py-2" placeholder="_________________">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block font-bold">How many in your household?</label>
+                    <input type="text" name="household_count" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none py-2" placeholder="______________">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <p class="font-bold">Are you a Christian?</p>
+                        <div class="flex space-x-6">
+                            <label class="flex items-center space-x-2"><input type="radio" name="christian" value="yes"> <span>Yes</span></label>
+                            <label class="flex items-center space-x-2"><input type="radio" name="christian" value="no"> <span>No</span></label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p class="font-bold">Do you believe Joseph Smith was a prophet?</p>
+                        <div class="flex space-x-6">
+                            <label class="flex items-center space-x-2"><input type="radio" name="joseph_smith" value="yes"> <span>Yes</span></label>
+                            <label class="flex items-center space-x-2"><input type="radio" name="joseph_smith" value="no"> <span>No</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="font-bold">Are you Red-Pilled, or had some kind of realization that what most people accept as normal, in fact isn’t?</p>
+                    <p class="text-sm italic text-secondary">Do you consider yourself “Red-Pilled”, or had some kind of realization about what is real or unreal, true or false?</p>
+                    <div class="flex space-x-6">
+                        <label class="flex items-center space-x-2"><input type="radio" name="red_pilled" value="yes"> <span>Yes</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="red_pilled" value="no"> <span>No</span></label>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="font-bold">Who is head of the family?</p>
+                    <div class="flex flex-wrap gap-6">
+                        <label class="flex items-center space-x-2"><input type="radio" name="family_head" value="husband"> <span>Husband</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="family_head" value="wife"> <span>Wife</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="family_head" value="mutual"> <span>Mutual</span></label>
+                    </div>
+                </div>
+
+                <div class="space-y-6 pt-6 border-t border-gray-100">
+                    <p class="font-bold">What are your primary reasons for wanting to join an intentional community?</p>
+                    <p class="text-sm italic text-secondary mb-4">Please number the options below, with 1 being the most important and 12 being the least important.</p>
+                    
+                    <div class="space-y-3">
+                        {[
+                            "Creating a healthy, moral culture.",
+                            "Fostering interpersonal relationships.",
+                            "Making a healthy environment for children.",
+                            "Growing or raising your own food.",
+                            "Mutual self-defense.",
+                            "Relocating to a better area.",
+                            "Working with like minded people.",
+                            "Spiritual growth.",
+                            "Outreach, ministry or charity work.",
+                            "Affordable housing.",
+                            "Escaping a coming disaster."
+                        ].map((reason) => (
+                            <div class="flex items-center space-x-4">
+                                <input type="number" min="1" max="12" class="w-16 border border-gray-300 rounded p-1 text-center" placeholder="____">
+                                <span>{reason}</span>
+                            </div>
+                        ))}
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-4">
+                                <input type="number" min="1" max="12" class="w-16 border border-gray-300 rounded p-1 text-center" placeholder="____">
+                                <span>Other not listed:</span>
+                            </div>
+                            <input type="text" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none py-2 ml-20" placeholder="_______________________________________">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-10 text-center">
+                    <button type="submit" class="border-3 border-solid border-default-text rounded-[20px] px-[40px] py-[15px] text-[1.2em] text-default-text bg-white font-bold hover:bg-[#bad4c2] transition-colors shadow-lg">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</Layout>
