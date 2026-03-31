@@ -10,16 +10,17 @@ const reasons = [
     "Spiritual growth.",
     "Outreach, ministry or charity work.",
     "Affordable housing.",
-    "Escaping a coming disaster."
+    "Escaping a coming disaster.",
+    "Other",
 ];
 ---
 
-<div class="2xl:w-5/12 w-full bg-white py-16 rounded-2xl sm:w-9/12 shadow-xl border border-gray-100">
+<div class="w-full bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 text-left">
     <form
       name="Contact" 
       data-netlify="true"
       netlify-honeypot="bot-field"
-      class="flex flex-col gap-4 md:gap-6 place-items-center"
+      class="flex flex-col gap-8"
       method="POST"
       action="/success"
     >
@@ -31,73 +32,88 @@ const reasons = [
       </p>
       <input type="hidden" name="form-name" value="Contact" />
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-10/12 md:w-3/4">
-        <span class="flex gap-2 flex-col">
-          <label for="name" class="text-base md:text-xl text-black ">Name:</label>
-          <input type="text" name="name" required id="name" placeholder="Name" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-        </span>
-        <span class="flex gap-2 flex-col">
-          <label for="age" class="text-base md:text-xl text-black">Age:</label>
-          <input type="text" name="age" required id="age" placeholder="Age" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-        </span>
-        <span class="flex gap-2 flex-col">
-          <label for="sex" class="text-base md:text-xl text-black">Sex:</label>
-          <input type="text" name="sex" required id="sex" placeholder="Sex" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-        </span>
-        <span class="flex gap-2 flex-col">
-          <label for="race" class="text-base md:text-xl text-black">Race:</label>
-          <input type="text" name="race" required id="race" placeholder="Race" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-        </span>
-      </div>
-
-      <span class="flex gap-2 flex-col w-10/12 md:w-3/4">
-        <label for="household_count" class="text-base md:text-xl text-black">How many in your household?</label>
-        <input type="text" name="household_count" required id="household_count" placeholder="0" class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white" />
-      </span>
-
-      <div class="flex flex-col gap-4 w-10/12 md:w-3/4 text-black">
+      <!-- Basic Info -->
+      <div class="flex flex-col gap-8 w-full">
         <div class="flex flex-col gap-2">
-            <p class="font-bold text-sm md:text-base">Are you a Christian?</p>
-            <div class="flex space-x-4">
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="christian" value="yes"> <span>Yes</span></label>
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="christian" value="no"> <span>No</span></label>
-            </div>
+          <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Name</div>
+          <input type="text" name="name" required id="name" placeholder="Full Name" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black" />
         </div>
-
         <div class="flex flex-col gap-2">
-            <p class="font-bold text-sm md:text-base">Do you believe Joseph Smith was a prophet?</p>
-            <div class="flex space-x-4">
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="joseph_smith" value="yes"> <span>Yes</span></label>
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="joseph_smith" value="no"> <span>No</span></label>
-            </div>
+          <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Age</div>
+          <input type="text" name="age" required id="age" placeholder="Age" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-40" />
         </div>
-
         <div class="flex flex-col gap-2">
-            <p class="font-bold text-sm md:text-base">Are you Red-Pilled?</p>
-            <div class="flex space-x-4">
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="red_pilled" value="yes"> <span>Yes</span></label>
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="red_pilled" value="no"> <span>No</span></label>
-            </div>
+          <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Sex</div>
+          <input type="text" name="sex" required id="sex" placeholder="Sex" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-40" />
         </div>
-
         <div class="flex flex-col gap-2">
-            <p class="font-bold text-sm md:text-base">Who is head of the family?</p>
-            <div class="flex flex-wrap gap-4">
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="family_head" value="husband"> <span>Husband</span></label>
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="family_head" value="wife"> <span>Wife</span></label>
-                <label class="flex items-center space-x-2 text-sm"><input type="radio" name="family_head" value="mutual"> <span>Mutual</span></label>
-            </div>
+          <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Race</div>
+          <input type="text" name="race" required id="race" placeholder="Race" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-72" />
         </div>
       </div>
 
-      <div class="flex flex-col gap-4 w-10/12 md:w-3/4 text-black border-t border-gray-300 pt-4">
-        <p class="font-bold text-sm md:text-base">Primary reasons for wanting to join?</p>
-        <p class="text-xs italic text-secondary">Number options (1 = most important, 12 = least).</p>
-        <div class="grid grid-cols-1 gap-2">
+      <div class="flex flex-col gap-2 w-full">
+        <div class="text-base font-bold text-gray-700 uppercase tracking-wider">How many in your household?</div>
+        <input type="text" name="household_count" required id="household_count" placeholder="0" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-32" />
+      </div>
+
+      <!-- Values / Background -->
+      <div class="flex flex-col gap-16 text-black border-t border-gray-100 pt-16 w-full">
+        <div class="flex flex-col gap-8">
+            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Are you a Christian?</div>
+            <div class="flex flex-col gap-6">
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="christian" value="yes" class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="christian" value="no" class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8">
+            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Do you believe Joseph Smith was a prophet?</div>
+            <div class="flex flex-col gap-6">
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="joseph_smith" value="yes" class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="joseph_smith" value="no" class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-2">
+              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Are you Red-Pilled?</div>
+              <div class="text-sm text-gray-500 italic uppercase tracking-tight">Realization that what most people accept as normal, in fact isn’t.</div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="red_pilled" value="yes" class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
+                <label class="flex items-center space-x-4 cursor-pointer"><input type="radio" name="red_pilled" value="no" class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8">
+            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Who is head of the family?</div>
+            <div class="flex flex-col gap-6">
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="husband" class="accent-primary w-8 h-8"> <span class="text-xl">Husband</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="wife" class="accent-primary w-8 h-8"> <span class="text-xl">Wife</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="mutual" class="accent-primary w-8 h-8"> <span class="text-xl">Mutual</span></label>
+            </div>
+        </div>
+      </div>
+
+      <!-- Reasons -->
+      <div class="flex flex-col gap-10 text-black border-t border-gray-100 pt-10 w-full">
+        <div class="flex flex-col gap-2">
+            <div class="font-bold text-base text-gray-700 uppercase tracking-wider">Primary reasons for wanting to join?</div>
+            <div class="text-sm italic text-secondary uppercase tracking-tight">Number options (1 = most important, 12 = least).</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
             {reasons.map((reason) => (
-                <div class="flex items-center space-x-3">
-                    <input type="number" name={`reason_${reason.replace(/\s+/g, '_').replace(/[^\w]/g, '').toLowerCase()}`} min="1" max="12" class="w-12 border border-gray-300 rounded p-0.5 text-center text-sm" placeholder="__">
-                    <span class="text-sm">{reason}</span>
+                <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+                    <span class="text-lg text-gray-700 font-medium">{reason}</span>
+                    <input 
+                      type="number" 
+                      name={`reason_${reason.replace(/\s+/g, '_').replace(/[^\w]/g, '').toLowerCase()}`} 
+                      min="1" 
+                      max="12" 
+                      class="w-12 border-b-2 border-gray-200 focus:border-primary outline-none p-1 text-center text-lg transition-colors bg-white text-black" 
+                      placeholder="-"
+                    >
                 </div>
             ))}
         </div>
@@ -105,23 +121,19 @@ const reasons = [
 
       <button
         type="submit"
-        class=" border-2 border-primary hover:bg-[#bad4c2] text-default-text bg-white rounded-lg w-10/12 md:w-3/4 md:text-2xl py-2 md:py-3 font-bold"
+        class="mt-4 bg-primary hover:bg-opacity-90 text-white rounded-xl py-4 text-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
       >
-        Submit
+        Submit Application
       </button>
     </form>
 </div>
 
 <style>
   ::placeholder { 
-    color: darkgrey; 
+    color: #cbd5e1; 
   }
 
   .hidden {
     display: none;
-  }
-
-  input {
-    color: black; 
   }
 </style>
