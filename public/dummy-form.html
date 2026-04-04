@@ -3,82 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <title>Contact Form - Alternative Everything</title>
   </head>
   <body>
+    <!-- This file is used by Netlify to detect the form fields for the Astro ContactForm component. -->
     <form
-      name="Contact Form"
+      name="Contact"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      class="flex flex-col gap-4 md:gap-6 place-items-center"
-      method="post"
+      method="POST"
       action="/thank-you"
     >
-      <p class="hidden">
-        <label>
-          Don’t fill this out:
-          <input name="bot-field" />
-        </label>
+      <input type="hidden" name="form-name" value="Contact" />
+      <p style="display:none">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
       </p>
-      <input type="hidden" name="form-name" value="Contact Form" />
-      <span class="flex gap-2 flex-col md:w-3/4 w-10/12">
-        <label for="firstName" class="text-base md:text-xl text-black">
-          First name:
-        </label>
-        <input
-          type="text"
-          name="firstName"
-          required
-          id="firstName"
-          placeholder="John"
-          class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white"
-        />
-      </span>
-      <span class="flex gap-2 flex-col md:w-3/4 w-10/12">
-        <label for="lastName" class="text-base md:text-xl text-black">
-          Last Name:
-        </label>
-        <input
-          type="text"
-          placeholder="Calvin"
-          class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white"
-          name="lastName"
-          required
-          id="lastName"
-        />
-        <input type="hidden" name="isStudentForm" value="Not Student Form" />
-      </span>
-      <span class="flex gap-2 flex-col w-10/12 md:w-3/4">
-        <label for="email" class="text-base md:text-xl text-black">
-          Email:
-        </label>
-        <input
-          class="md:text-xl border-2 rounded-lg p-2 border-primary bg-white"
-          type="email"
-          required
-          placeholder="tulips@institutes.com"
-          id="email"
-          name="email"
-        />
-      </span>
-      <span class="flex gap-2 flex-col w-10/12 md:w-3/4">
-        <label for="text" class="text-base md:text-xl text-black">
-          How can we help you?
-        </label>
-        <textarea
-          required
-          id="text"
-          name="text"
-          placeholder="Your text here..."
-          class="ease-soft md:text-xl border-2 rounded-lg p-2 border-primary h-40 text-wrap bg-white"
-        ></textarea>
-      </span>
-      <button
-        type="submit"
-        class="border-2 border-primary hover:border-primary-light text-white bg-primary rounded-lg w-10/12 md:w-3/4 md:text-2xl robo py-2 md:py-3"
-      >
-        Submit
-      </button>
+
+      <!-- Basic Info -->
+      <input type="text" name="name" />
+      <input type="text" name="age" />
+      <input type="text" name="sex" />
+      <input type="text" name="race" />
+      <input type="text" name="household_count" />
+
+      <!-- Values / Background -->
+      <input type="radio" name="christian" value="yes" />
+      <input type="radio" name="christian" value="no" />
+
+      <input type="radio" name="joseph_smith" value="yes" />
+      <input type="radio" name="joseph_smith" value="no" />
+
+      <input type="radio" name="red_pilled" value="yes" />
+      <input type="radio" name="red_pilled" value="no" />
+
+      <input type="radio" name="family_head" value="husband" />
+      <input type="radio" name="family_head" value="wife" />
+      <input type="radio" name="family_head" value="mutual" />
+
+      <!-- Reasons -->
+      <input type="number" name="reason_creating_a_healthy_moral_culture" />
+      <input type="number" name="reason_fostering_interpersonal_relationships" />
+      <input type="number" name="reason_making_a_healthy_environment_for_children" />
+      <input type="number" name="reason_growing_or_raising_your_own_food" />
+      <input type="number" name="reason_mutual_selfdefense" />
+      <input type="number" name="reason_relocating_to_a_better_area" />
+      <input type="number" name="reason_working_with_like_minded_people" />
+      <input type="number" name="reason_spiritual_growth" />
+      <input type="number" name="reason_outreach_ministry_or_charity_work" />
+      <input type="number" name="reason_affordable_housing" />
+      <input type="number" name="reason_escaping_a_coming_disaster" />
+      <input type="number" name="reason_other" />
+
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
