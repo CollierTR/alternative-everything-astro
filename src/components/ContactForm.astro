@@ -89,17 +89,16 @@ const traditions = [
         <div class="flex flex-col gap-8">
             <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Are you a Christian?</div>
             <div class="flex flex-col gap-6">
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="christian" value="yes" class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="christian" value="no" class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="christian" value="yes" required class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="christian" value="no" required class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
             </div>
         </div>
 
         <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
               <div class="text-base font-bold text-gray-700 uppercase tracking-wider">What church tradition do you identify with?</div>
-              <div class="text-sm text-gray-500 italic uppercase tracking-tight">What group or denomination do you belong to? Name an association if you have one.</div>
             </div>
-            <select name="tradition" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-full md:w-96">
+            <select name="tradition" required class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-full md:w-96">
                 <option value="" disabled selected>Select a tradition</option>
                 {traditions.map((tradition) => (
                     <option value={tradition}>{tradition}</option>
@@ -109,21 +108,20 @@ const traditions = [
 
         <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
-              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Are you Red-Pilled?</div>
-              <div class="text-sm text-gray-500 italic uppercase tracking-tight">Realization that what most people accept as normal, in fact isn’t.</div>
+              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Are you Red-Pilled, or had some kind of realization that what most people accept as normal, in fact isn’t?</div>
             </div>
             <div class="flex flex-col gap-6">
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="red_pilled" value="yes" class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
-                <label class="flex items-center space-x-4 cursor-pointer"><input type="radio" name="red_pilled" value="no" class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="red_pilled" value="yes" required class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
+                <label class="flex items-center space-x-4 cursor-pointer"><input type="radio" name="red_pilled" value="no" required class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
             </div>
         </div>
 
         <div class="flex flex-col gap-8">
             <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Who is head of the family?</div>
             <div class="flex flex-col gap-6">
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="husband" class="accent-primary w-8 h-8"> <span class="text-xl">Husband</span></label>
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="wife" class="accent-primary w-8 h-8"> <span class="text-xl">Wife</span></label>
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="mutual" class="accent-primary w-8 h-8"> <span class="text-xl">Mutual</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="husband" required class="accent-primary w-8 h-8"> <span class="text-xl">Husband</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="wife" required class="accent-primary w-8 h-8"> <span class="text-xl">Wife</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="mutual" required class="accent-primary w-8 h-8"> <span class="text-xl">Mutual</span></label>
             </div>
         </div>
       </div>
@@ -143,11 +141,22 @@ const traditions = [
                       name={`reason_${reason.replace(/\s+/g, '_').replace(/[^\w]/g, '').toLowerCase()}`} 
                       min="1" 
                       max="12" 
+                      required
                       class="w-12 border-b-2 border-gray-200 focus:border-primary outline-none p-1 text-center text-lg transition-colors bg-white text-black" 
                       placeholder="-"
                     >
                 </div>
             ))}
+        </div>
+
+        <div class="flex flex-col gap-4 mt-4">
+          <div class="text-base font-bold text-gray-700 uppercase tracking-wider">If you selected "Other" for reasons or tradition, please explain:</div>
+          <textarea 
+            name="other_explanation" 
+            rows="3" 
+            class="border-2 border-gray-100 focus:border-primary outline-none p-4 rounded-xl text-lg transition-colors bg-white text-black w-full" 
+            placeholder="Provide more detail here..."
+          ></textarea>
         </div>
       </div>
 
