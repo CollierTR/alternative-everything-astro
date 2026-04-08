@@ -39,6 +39,14 @@ const traditions = [
     "Seventh Day Adventist",
     "United Church of Christ",
     "Other",
+    "Not Applicable",
+];
+
+const timelines = [
+    "Immediately (Within 3 months)",
+    "Short Term (3-12 months)",
+    "Long Term (1-2 years)",
+    "Just exploring for now",
 ];
 ---
 
@@ -96,7 +104,8 @@ const traditions = [
 
         <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
-              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">What church tradition do you identify with?</div>
+              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Faith Tradition</div>
+              <div class="text-sm text-gray-500 italic uppercase tracking-tight">What denomination or group do you identify with? Select "Not Applicable" if not Christian.</div>
             </div>
             <select name="tradition" required class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-full md:w-96">
                 <option value="" disabled selected>Select a tradition</option>
@@ -108,20 +117,24 @@ const traditions = [
 
         <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
-              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Are you Red-Pilled, or had some kind of realization that what most people accept as normal, in fact isn’t?</div>
+              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Institutional Skepticism</div>
+              <div class="text-sm text-gray-500 italic uppercase tracking-tight">Do you recognize that many mainstream institutions (food, health, education) have become misaligned with your values?</div>
             </div>
             <div class="flex flex-col gap-6">
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="red_pilled" value="yes" required class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
-                <label class="flex items-center space-x-4 cursor-pointer"><input type="radio" name="red_pilled" value="no" required class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="institutional_skepticism" value="yes" required class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
+                <label class="flex items-center space-x-4 cursor-pointer"><input type="radio" name="institutional_skepticism" value="no" required class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
             </div>
         </div>
 
         <div class="flex flex-col gap-8">
-            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Who is head of the family?</div>
+            <div class="flex flex-col gap-2">
+                <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Household Leadership Structure</div>
+                <div class="text-sm text-gray-500 italic uppercase tracking-tight">Who is the primary decision-maker and spiritual head of your family?</div>
+            </div>
             <div class="flex flex-col gap-6">
                 <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="husband" required class="accent-primary w-8 h-8"> <span class="text-xl">Husband</span></label>
                 <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="wife" required class="accent-primary w-8 h-8"> <span class="text-xl">Wife</span></label>
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="mutual" required class="accent-primary w-8 h-8"> <span class="text-xl">Mutual</span></label>
+                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="family_head" value="mutual" required class="accent-primary w-8 h-8"> <span class="text-xl">Mutual Agreement</span></label>
             </div>
         </div>
       </div>
@@ -129,23 +142,20 @@ const traditions = [
       <!-- Reasons -->
       <div class="flex flex-col gap-10 text-black border-t border-gray-100 pt-10 w-full">
         <div class="flex flex-col gap-2">
-            <div class="font-bold text-base text-gray-700 uppercase tracking-wider">Primary reasons for wanting to join?</div>
-            <div class="text-sm italic text-secondary uppercase tracking-tight">Number options (1 = most important, 12 = least).</div>
+            <div class="font-bold text-base text-gray-700 uppercase tracking-wider">Priorities</div>
+            <div class="text-sm italic text-secondary uppercase tracking-tight">Select your top 3 primary reasons for wanting to join an intentional community.</div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
             {reasons.map((reason) => (
-                <div class="flex items-center justify-between border-b border-gray-100 pb-3">
-                    <span class="text-lg text-gray-700 font-medium">{reason}</span>
+                <label class="flex items-center space-x-4 cursor-pointer border-b border-gray-50 pb-2 hover:bg-gray-50 transition-colors">
                     <input 
-                      type="number" 
-                      name={`reason_${reason.replace(/\s+/g, '_').replace(/[^\w]/g, '').toLowerCase()}`} 
-                      min="1" 
-                      max="12" 
-                      required
-                      class="w-12 border-b-2 border-gray-200 focus:border-primary outline-none p-1 text-center text-lg transition-colors bg-white text-black" 
-                      placeholder="-"
+                      type="checkbox" 
+                      name="reasons" 
+                      value={reason}
+                      class="accent-primary w-6 h-6"
                     >
-                </div>
+                    <span class="text-lg text-gray-700">{reason}</span>
+                </label>
             ))}
         </div>
 
