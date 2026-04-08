@@ -14,6 +14,32 @@ const reasons = [
     "Other",
 ];
 
+const traditions = [
+    "Non-Denominational",
+    "Anabaptist",
+    "Anglican",
+    "Assemblies of God",
+    "Baptist",
+    "Bible Church",
+    "Catholic",
+    "Christian Science",
+    "Church of Christ",
+    "Eastern Orthodox",
+    "Episcopal",
+    "Jehovah’s Witnesses",
+    "Latter-Day Saints",
+    "Lutheran",
+    "Mennonite",
+    "Messianic",
+    "Methodist",
+    "Nazarene",
+    "Pentecostal",
+    "Presbyterian",
+    "Reformed",
+    "Seventh Day Adventist",
+    "United Church of Christ",
+    "Other",
+];
 ---
 
 <div class="w-full bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 text-left">
@@ -69,11 +95,16 @@ const reasons = [
         </div>
 
         <div class="flex flex-col gap-8">
-            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Do you believe Joseph Smith was a prophet?</div>
-            <div class="flex flex-col gap-6">
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="joseph_smith" value="yes" class="accent-primary w-8 h-8"> <span class="text-xl">Yes</span></label>
-                <label class="flex items-center space-x-6 cursor-pointer"><input type="radio" name="joseph_smith" value="no" class="accent-primary w-8 h-8"> <span class="text-xl">No</span></label>
+            <div class="flex flex-col gap-2">
+              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">What church tradition do you identify with?</div>
+              <div class="text-sm text-gray-500 italic uppercase tracking-tight">What group or denomination do you belong to? Name an association if you have one.</div>
             </div>
+            <select name="tradition" class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-full md:w-96">
+                <option value="" disabled selected>Select a tradition</option>
+                {traditions.map((tradition) => (
+                    <option value={tradition}>{tradition}</option>
+                ))}
+            </select>
         </div>
 
         <div class="flex flex-col gap-8">
