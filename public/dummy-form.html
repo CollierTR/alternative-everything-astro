@@ -12,7 +12,7 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       method="POST"
-      action="/thank-you"
+      action="/"
     >
       <input type="hidden" name="form-name" value="Contact" />
       <p style="display:none">
@@ -30,8 +30,11 @@
       <input type="radio" name="christian" value="yes" />
       <input type="radio" name="christian" value="no" />
 
-      <input type="radio" name="joseph_smith" value="yes" />
-      <input type="radio" name="joseph_smith" value="no" />
+      <select name="tradition">
+        <option value="Non-Denominational">Non-Denominational</option>
+        <option value="Other">Other</option>
+        <option value="Not Applicable">Not Applicable</option>
+      </select>
 
       <input type="radio" name="red_pilled" value="yes" />
       <input type="radio" name="red_pilled" value="no" />
@@ -40,19 +43,20 @@
       <input type="radio" name="family_head" value="wife" />
       <input type="radio" name="family_head" value="mutual" />
 
-      <!-- Reasons -->
-      <input type="number" name="reason_creating_a_healthy_moral_culture" />
-      <input type="number" name="reason_fostering_interpersonal_relationships" />
-      <input type="number" name="reason_making_a_healthy_environment_for_children" />
-      <input type="number" name="reason_growing_or_raising_your_own_food" />
-      <input type="number" name="reason_mutual_selfdefense" />
-      <input type="number" name="reason_relocating_to_a_better_area" />
-      <input type="number" name="reason_working_with_like_minded_people" />
-      <input type="number" name="reason_spiritual_growth" />
-      <input type="number" name="reason_outreach_ministry_or_charity_work" />
-      <input type="number" name="reason_affordable_housing" />
-      <input type="number" name="reason_escaping_a_coming_disaster" />
-      <input type="number" name="reason_other" />
+      <!-- Reasons / Priorities (Checkbox Group) -->
+      <input type="checkbox" name="reasons" value="Spiritual growth" />
+      <input type="checkbox" name="reasons" value="Sustainable living" />
+
+      <!-- New Text Sections -->
+      <textarea name="personal_journey"></textarea>
+      <textarea name="skills_trades"></textarea>
+
+      <!-- Logistics -->
+      <select name="timeline">
+        <option value="Immediately (Within 3 months)">Immediately</option>
+      </select>
+
+      <textarea name="other_explanation"></textarea>
 
       <button type="submit">Submit</button>
     </form>
