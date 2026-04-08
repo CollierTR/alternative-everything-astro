@@ -159,13 +159,54 @@ const timelines = [
             ))}
         </div>
 
-        <div class="flex flex-col gap-4 mt-4">
+        <div class="flex flex-col gap-4 mt-12 pt-12 border-t border-gray-100">
+          <div class="flex flex-col gap-2">
+            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Your Journey</div>
+            <div class="text-sm text-gray-500 italic uppercase tracking-tight">Tell us briefly about your path toward intentional living. Why are you looking for an alternative now?</div>
+          </div>
+          <textarea 
+            name="personal_journey" 
+            required
+            rows="4" 
+            class="border-2 border-gray-100 focus:border-primary outline-none p-4 rounded-xl text-lg transition-colors bg-white text-black w-full" 
+            placeholder="Share your story..."
+          ></textarea>
+        </div>
+
+        <div class="flex flex-col gap-4 mt-8">
+          <div class="flex flex-col gap-2">
+            <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Skills & Contributions</div>
+            <div class="text-sm text-gray-500 italic uppercase tracking-tight">What specific skills, trades, or experience (e.g., agriculture, construction, teaching, medical) would you bring to a community?</div>
+          </div>
+          <textarea 
+            name="skills_trades" 
+            required
+            rows="3" 
+            class="border-2 border-gray-100 focus:border-primary outline-none p-4 rounded-xl text-lg transition-colors bg-white text-black w-full" 
+            placeholder="How would you like to contribute?"
+          ></textarea>
+        </div>
+
+        <div class="flex flex-col gap-4 mt-8">
+            <div class="flex flex-col gap-2">
+              <div class="text-base font-bold text-gray-700 uppercase tracking-wider">Readiness Timeline</div>
+              <div class="text-sm text-gray-500 italic uppercase tracking-tight">What is your ideal timeline for potentially joining or relocating to a community?</div>
+            </div>
+            <select name="timeline" required class="border-b-2 border-gray-200 focus:border-primary outline-none py-2 text-xl transition-colors bg-white text-black w-full md:w-96">
+                <option value="" disabled selected>Select a timeline</option>
+                {timelines.map((timeline) => (
+                    <option value={timeline}>{timeline}</option>
+                ))}
+            </select>
+        </div>
+
+        <div class="flex flex-col gap-4 mt-8">
           <div class="text-base font-bold text-gray-700 uppercase tracking-wider">If you selected "Other" for reasons or tradition, please explain:</div>
           <textarea 
             name="other_explanation" 
-            rows="3" 
+            rows="2" 
             class="border-2 border-gray-100 focus:border-primary outline-none p-4 rounded-xl text-lg transition-colors bg-white text-black w-full" 
-            placeholder="Provide more detail here..."
+            placeholder="Any other details..."
           ></textarea>
         </div>
       </div>
